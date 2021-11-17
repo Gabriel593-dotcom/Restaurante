@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import restaurante.application.entities.Table;
 import restaurante.application.entities.TableFactory;
-import restaurante.application.services.TableService;
+import static restaurante.application.services.TableService.*; 
 
 public class Main {
 
@@ -43,7 +43,7 @@ public class Main {
 					choice = sc.nextInt();
 					break;
 				} else {
-					TableService.reserveTable(tables.get(numTable - 1));
+					reserveTable(tables.get(numTable - 1));
 					printMenu();
 					choice = sc.nextInt();
 					break;
@@ -60,7 +60,7 @@ public class Main {
 					choice = sc.nextInt();
 					break;
 				} else {
-					TableService.vacateTable(tables.get(numTable - 1));
+					vacateTable(tables.get(numTable - 1));
 					printMenu();
 					choice = sc.nextInt();
 					break;
@@ -92,8 +92,8 @@ public class Main {
 	public static void showTablesFree() {
 		System.out.println("-------MESAS LIVRES-------");
 		for (Table t : tables) {
-			if (TableService.tableIsFree(t)) {
-				System.out.println(t.getNumTable());
+			if (tableIsFree(t)) {
+				System.out.println("Mesa " + t.getNumTable());
 			}
 		}
 	}
