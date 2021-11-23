@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import restaurante.application.entities.Table;
 import restaurante.application.entities.TableFactory;
-import static restaurante.application.services.TableService.*; 
+import static restaurante.application.services.TableService.*;
 
 public class Main {
 
@@ -97,7 +97,7 @@ public class Main {
 			}
 		}
 	}
-	
+
 	public static void printAllTables() {
 		for (Table t : tables) {
 			System.out.println(t.getNumTable() + " - " + t.getStatusTable());

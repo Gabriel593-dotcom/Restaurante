@@ -26,7 +26,7 @@ public class TableService {
 	}
 
 	public static Boolean tableIsFree(Table table) {
-		if (table.getStatusTable().equals(StatusTable.FREE)) {
+		if (StatusTable.value(table.getStatusTable()) == "Livre") {
 			return true;
 		} else {
 			return false;

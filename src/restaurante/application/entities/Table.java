@@ -5,23 +5,23 @@ import restaurante.application.enums.StatusTable;
 public class Table {
 
 	private final Integer numTable;
-	private StatusTable statusTable;
+	private String statusTable;
 
 	protected Table(Integer numTable, StatusTable statusTable) {
 		this.numTable = numTable;
-		this.statusTable = statusTable;
+		setStatusTable(statusTable);
 	}
 
 	public Integer getNumTable() {
 		return numTable;
 	}
 
-	public StatusTable getStatusTable() {
-		return this.statusTable;
+	public String getStatusTable() {
+		return StatusTable.value(statusTable);
 	}
 
 	public void setStatusTable(StatusTable statusTable) {
-		this.statusTable = statusTable;
+		this.statusTable = statusTable.getStatus();
 	}
 
 }
