@@ -38,7 +38,7 @@ public class Main {
 				numTable = sc.nextInt();
 
 				if (numTable < 1 || numTable > tables.size()) {
-					System.out.println("Opção inválida.");
+					System.out.println("Opo invlida.");
 					printMenu();
 					choice = sc.nextInt();
 					break;
@@ -55,7 +55,7 @@ public class Main {
 				numTable = sc.nextInt();
 
 				if (numTable < 1 || numTable > tables.size()) {
-					System.out.println("Opção inválida.");
+					System.out.println("Opo invlida.");
 					printMenu();
 					choice = sc.nextInt();
 					break;
@@ -74,7 +74,7 @@ public class Main {
 			}
 		}
 
-		System.out.println("Até mais!");
+		System.out.println("At mais!");
 		sc.close();
 
 	}
